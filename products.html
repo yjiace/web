@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>智启青春科技 - 我们的产品</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        .product-card {
+            min-height: 400px;
+        }
+        .product-icon {
+            height: 200px;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+    <header class="bg-white shadow-md">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="logo.svg" alt="智启青春科技 Logo" class="h-16 w-16 mr-4">
+                <span class="text-2xl font-bold text-gray-800">智启青春科技</span>
+            </div>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="text-gray-800 hover:text-blue-500">首页</a>
+                <a href="#" class="text-blue-500">产品</a>
+                <a href="about.html" class="text-gray-800 hover:text-blue-500">关于我们</a>
+                <a href="contact-us.html" class="text-gray-800 hover:text-blue-500">联系我们</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6 py-16">
+        <h1 class="text-4xl font-bold mb-12 text-center text-gray-800">我们的AI产品</h1>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <!-- 产品1：AI助手 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden product-card flex flex-col">
+                <div class="product-icon p-8 flex items-center justify-center bg-blue-50">
+                    <svg class="w-full h-full" viewBox="0 0 200 200" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="200" height="200" fill="#E6F7FF" />
+                        <circle cx="100" cy="100" r="70" fill="#1890FF" />
+                        <rect x="70" y="80" width="60" height="40" rx="10" fill="white" />
+                        <circle cx="85" cy="100" r="5" fill="#1890FF" />
+                        <circle cx="100" cy="100" r="5" fill="#1890FF" />
+                        <circle cx="115" cy="100" r="5" fill="#1890FF" />
+                        <path d="M60 140 Q100 180 140 140" stroke="white" stroke-width="8" fill="none" />
+                        <path d="M150 70 L180 40 L180 70 Z" fill="white" />
+                    </svg>
+                </div>
+                <div class="p-6 flex-grow">
+                    <h2 class="text-3xl font-bold mb-4 text-gray-800">AI助手</h2>
+                    <p class="text-gray-600 mb-4">智能对话系统，为用户提供24/7全天候服务支持。适用于客户服务、个人助理等多种场景。</p>
+                    <ul class="text-gray-600 list-disc list-inside">
+                        <li>自然语言处理技术</li>
+                        <li>多语言支持</li>
+                        <li>情感分析功能</li>
+                        <li>可定制的知识库</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- 产品2：智能分析平台 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden product-card flex flex-col">
+                <div class="product-icon p-8 flex items-center justify-center bg-green-50">
+                    <svg class="w-full h-full" viewBox="0 0 200 200" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="200" height="200" fill="#F6FFED" />
+                        <rect x="20" y="80" width="30" height="100" fill="#52C41A" />
+                        <rect x="60" y="50" width="30" height="130" fill="#52C41A" />
+                        <rect x="100" y="100" width="30" height="80" fill="#52C41A" />
+                        <rect x="140" y="30" width="30" height="150" fill="#52C41A" />
+                        <circle cx="150" cy="50" r="30" fill="none" stroke="#1890FF" stroke-width="8" />
+                        <line x1="172" y1="72" x2="190" y2="90" stroke="#1890FF" stroke-width="8" />
+                    </svg>
+                </div>
+                <div class="p-6 flex-grow">
+                    <h2 class="text-3xl font-bold mb-4 text-gray-800">智能分析平台</h2>
+                    <p class="text-gray-600 mb-4">大数据分析工具，帮助企业洞察市场趋势和用户需求。提供可视化报表和预测模型。</p>
+                    <ul class="text-gray-600 list-disc list-inside">
+                        <li>实时数据处理</li>
+                        <li>高度可视化的数据报表</li>
+                        <li>预测分析功能</li>
+                        <li>多源数据整合能力</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- 产品3：AI图像处理 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden product-card flex flex-col">
+                <div class="product-icon p-8 flex items-center justify-center bg-red-50">
+                    <svg class="w-full h-full" viewBox="0 0 200 200" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="200" height="200" fill="#FFF1F0" />
+                        <rect x="40" y="60" width="120" height="80" rx="10" fill="#FF4D4F" />
+                        <circle cx="100" cy="100" r="30" fill="#FFF1F0" stroke="#FF4D4F" stroke-width="8" />
+                        <circle cx="70" cy="80" r="10" fill="#FFF1F0" />
+                        <path d="M140 40 L160 60 M150 30 L170 50 M160 20 L180 40" stroke="#FF4D4F" stroke-width="4" />
+                        <rect x="40" y="160" width="30" height="20" fill="#FF4D4F" />
+                        <rect x="85" y="160" width="30" height="20" fill="#FF4D4F" />
+                        <rect x="130" y="160" width="30" height="20" fill="#FF4D4F" />
+                    </svg>
+                </div>
+                <div class="p-6 flex-grow">
+                    <h2 class="text-3xl font-bold mb-4 text-gray-800">AI图像处理</h2>
+                    <p class="text-gray-600 mb-4">先进的图像识别和处理技术，适用于安防监控、医疗影像分析等多种行业应用。</p>
+                    <ul class="text-gray-600 list-disc list-inside">
+                        <li>高精度目标检测</li>
+                        <li>人脸识别技术</li>
+                        <li>医学影像分析</li>
+                        <li>实时视频处理能力</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- 产品4：智能推荐系统 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden product-card flex flex-col">
+                <div class="product-icon p-8 flex items-center justify-center bg-indigo-50">
+                    <svg class="w-full h-full" viewBox="0 0 200 200" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="200" height="200" fill="#F0F5FF" />
+                        <circle cx="100" cy="100" r="70" fill="none" stroke="#2F54EB" stroke-width="8" />
+                        <circle cx="100" cy="100" r="40" fill="none" stroke="#2F54EB" stroke-width="8" />
+                        <circle cx="100" cy="100" r="10" fill="#2F54EB" />
+                        <line x1="30" y1="30" x2="170" y2="170" stroke="#2F54EB" stroke-width="4" />
+                        <line x1="30" y1="170" x2="170" y2="30" stroke="#2F54EB" stroke-width="4" />
+                        <circle cx="30" cy="30" r="10" fill="#2F54EB" />
+                        <circle cx="170" cy="170" r="10" fill="#2F54EB" />
+                        <circle cx="30" cy="170" r="10" fill="#2F54EB" />
+                        <circle cx="170" cy="30" r="10" fill="#2F54EB" />
+                    </svg>
+                </div>
+                <div class="p-6 flex-grow">
+                    <h2 class="text-3xl font-bold mb-4 text-gray-800">智能推荐系统</h2>
+                    <p class="text-gray-600 mb-4">个性化推荐引擎，提升用户体验和转化率。适用于电商、内容平台等多种业务场景。</p>
+                    <ul class="text-gray-600 list-disc list-inside">
+                        <li>协同过滤算法</li>
+                        <li>实时个性化推荐</li>
+                        <li>多维度用户画像</li>
+                        <li>A/B测试支持</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-6 mt-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2024 智启青春科技. 保留所有权利。</p>
+        </div>
+    </footer>
+</body>
+</html>

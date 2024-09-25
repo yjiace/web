@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>智启青春科技 - AI智能助手</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        .chat-container {
+            height: calc(100vh - 200px);
+            min-height: 500px;
+        }
+        .chat-messages {
+            height: calc(100% - 60px);
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+    <header class="bg-white shadow-md">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="logo.svg" alt="智启青春科技 Logo" class="h-16 w-16 mr-4">
+                <span class="text-2xl font-bold text-gray-800">智启青春科技</span>
+            </div>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="text-gray-800 hover:text-blue-500">首页</a>
+                <a href="products.html" class="text-gray-800 hover:text-blue-500">产品</a>
+                <a href="about.html" class="text-gray-800 hover:text-blue-500">关于我们</a>
+                <a href="#" class="text-blue-500">AI智能助手</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6 py-8">
+        <div class="flex flex-col md:flex-row gap-8">
+            <!-- 左侧欢迎语和介绍 -->
+            <div class="md:w-1/3 lg:w-1/4">
+                <h1 class="text-3xl font-bold mb-6 text-gray-800">AI智能助手</h1>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h2 class="text-xl font-bold mb-4 text-gray-800">欢迎使用</h2>
+                    <p class="text-gray-600 mb-4">我们的AI助手是您与智启青春科技沟通的桥梁。无论您有什么问题、建议或需求，我们的AI都能为您提供及时、准确的回应。</p>
+                    <ul class="list-disc list-inside text-gray-600 mb-4 text-sm">
+                        <li>24/7全天候服务</li>
+                        <li>快速回答产品问题</li>
+                        <li>提供个性化解决方案</li>
+                        <li>收集反馈给团队</li>
+                    </ul>
+                    <p class="text-gray-600 text-sm">开始对话，体验智能交互的魅力吧！</p>
+                </div>
+            </div>
+
+            <!-- 右侧聊天界面 -->
+            <div class="md:w-2/3 lg:w-3/4">
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <div class="chat-container border border-gray-200 rounded-lg">
+                        <div class="chat-messages p-4 space-y-4">
+                            <!-- 消息将在这里动态添加 -->
+                            <div class="flex items-start">
+                                <img src="logo.svg" alt="AI" class="w-8 h-8 rounded-full mr-3">
+                                <div class="bg-blue-100 rounded-lg p-3 max-w-3/4">
+                                    <p class="text-sm">您好！我是智启青春科技的AI助手。很高兴为您服务，请问有什么我可以帮助您的吗？</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border-t border-gray-200 p-4">
+                            <form id="chat-form" class="flex">
+                                <input type="text" id="user-input" class="flex-grow rounded-l-lg border-t border-b border-l text-gray-800 border-gray-200 bg-white p-2" placeholder="输入您的问题...">
+                                <button type="submit" class="bg-blue-500 text-white rounded-r-lg px-6 py-2 hover:bg-blue-600 transition duration-300">发送</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-6 mt-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2024 智启青春科技. 保留所有权利。</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('chat-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            var userInput = document.getElementById('user-input');
+            var message = userInput.value.trim();
+            if (message) {
+                addMessage('user', message);
+                // 这里通常会发送消息到您的AI后端并获取响应
+                // 为了演示，我们只是简单地回显消息
+                setTimeout(function() {
+                    addMessage('ai', "感谢您的留言：" + message + "。我们的团队会认真处理您的反馈。还有什么我可以帮助您的吗？");
+                }, 1000);
+                userInput.value = '';
+            }
+        });
+
+        function addMessage(sender, message) {
+            var chatMessages = document.querySelector('.chat-messages');
+            var messageDiv = document.createElement('div');
+            messageDiv.className = 'flex items-start' + (sender === 'user' ? ' justify-end' : '');
+            var innerContent = sender === 'ai' 
+                ? '<img src="ai-avatar.png" alt="AI" class="w-8 h-8 rounded-full mr-3"><div class="bg-blue-100 rounded-lg p-3 max-w-3/4">'
+                : '<div class="bg-green-100 rounded-lg p-3 max-w-3/4">';
+            messageDiv.innerHTML = innerContent + '<p class="text-sm">' + message + '</p></div>';
+            chatMessages.appendChild(messageDiv);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+    </script>
+</body>
+</html>

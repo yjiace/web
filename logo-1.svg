@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="aiGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4285F4;stop-opacity:1" />
+      <stop offset="33%" style="stop-color:#EA4335;stop-opacity:1" />
+      <stop offset="66%" style="stop-color:#FBBC05;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#34A853;stop-opacity:1" />
+    </linearGradient>
+    <path id="pathA" d="M50,140 L78,60 M78,60 L86,60 L117,140 M60,114 L90,114" />
+    <path id="pathI" d="M144,60 L144,140" />
+  </defs>
+  
+  <!-- 白色背景 -->
+  <rect width="200" height="200" fill="white" />
+  
+  <!-- 简单的背景元素 -->
+  <circle cx="100" cy="100" r="90" fill="#F5F5F5" />
+  
+  <!-- 彩色AI文字 -->
+  <text x="100" y="140" font-family="Arial, sans-serif" font-size="120" font-weight="bold" fill="url(#aiGrad)" text-anchor="middle">AI</text>
+  
+  <!-- 动态效果：在A中移动的小球 -->
+  <circle r="5" fill="#4285F4">
+    <animateMotion dur="4s" repeatCount="indefinite">
+      <mpath href="#pathA" />
+    </animateMotion>
+  </circle>
+  
+  <!-- 动态效果：在I中移动的小球 -->
+  <circle r="5" fill="#34A853">
+    <animateMotion dur="2s" repeatCount="indefinite" keyPoints="0;1;0" keyTimes="0;0.5;1" calcMode="linear">
+      <mpath href="#pathI" />
+    </animateMotion>
+  </circle>
+</svg>
